@@ -1,0 +1,8 @@
+﻿@page "/databinding1"
+@inherits DataBinding1Base
+
+<h3>DataBinding1</h3>
+<h4>Data is flowing only in one direction i.e from the component class to the UI but not in the other direction i.e from the UI to the class.</h4>
+
+<b>Name with salutation:</b> @(Gender == "Male" ? $"Mr. {Name}" : $"Miss. {Name}")
+<b>Name :</b> <input value="@Name" />

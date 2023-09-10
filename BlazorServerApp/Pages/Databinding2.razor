@@ -1,0 +1,48 @@
+﻿@page "/databinding2"
+@inherits Databinding2Base
+
+<h3>Databindingdemo2</h3>
+
+<b>Name :</b>
+<input value="@Name" @onchange="@(e => { Name = e.Value.ToString(); })" />
+
+<br />
+<br />
+<h3>
+    Making two way data binding easier
+</h3>
+<p>The above example can be rewritten using the bind attribute as shown below. It simplifies two way data binding.</p>
+<br />
+<b>Employee Name :</b>
+<input @bind="Name" />
+<p>
+    In the above example we use bind which is short form of bind-value
+    <b> bind is short form of bind-value</b>
+</p>
+
+<br />
+<h3>
+    What if we do not want to wait, until the input element loses focus. As the value in the input element is being changed, we want the component class property to be updated.
+</h3>
+<p>
+    This can be achieved by specifying the event name in the two way data binding. To specify the event name we use the event parameter as shown in the example below. In this case we are binding to input event. This is raised as the value is being changed.
+</p>
+<b>Name :</b>
+<input @bind="Name" @bind:event="oninput" />
+
+<b>Colour :</b>
+<input @bind-value="Colour" />
+
+<br />
+<h3>
+    How Binding to element attributes other than value attribute
+</h3>
+<p>
+    bind-{ATTRIBUTE} along with bind-{ATTRIBUTE}:event syntax can be used to bind element attributes other than the value attribute
+</p>
+
+<div @bind-style="Colour" @bind-style:event="onchange">
+    <h3>The background colour of this text changes</h3>
+</div>
+
+<a href="https://www.pragimtech.com/blog/blazor/blazor-data-binding/" target="_blank">reference</a>
