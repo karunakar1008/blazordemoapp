@@ -18,7 +18,7 @@ namespace BlazorServerApp.Pages
         protected int SelectedEmployeesCount { get; set; } = 0;
         protected override async Task OnInitializedAsync()
         {
-            Employees =  (await EmployeeService.GetEmployees()).ToList();
+            Employees = (await EmployeeService.GetEmployees()).ToList();
             //await Task.Run(LoadEmployees);
             ExecuteAfterLoadEmployees();
         }
@@ -46,7 +46,7 @@ namespace BlazorServerApp.Pages
                 Email = "David@pragimtech.com",
                 DateOfBrith = new DateTime(1980, 10, 5),
                 Gender = Gender.Male,
-                DepartmentId=1,
+                DepartmentId = 1,
                 PhotoPath = "images/john.png"
             };
 
@@ -106,6 +106,10 @@ namespace BlazorServerApp.Pages
                 PhotoPath = "images/sam.png"
             };
             Employees.ToList().Add(e5);
+        }
+        protected async Task EmployeeDeleted()
+        {
+            Employees = (await EmployeeService.GetEmployees()).ToList();
         }
     }
 }

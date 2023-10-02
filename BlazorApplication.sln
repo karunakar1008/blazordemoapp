@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Models",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Api", "EmployeeManagement.Api\EmployeeManagement.Api.csproj", "{D01AC628-AA1D-4AAB-94C0-5AE5799F2363}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpmgTech.Components", "KpmgTech.Components\KpmgTech.Components.csproj", "{B602DCD2-6D9E-48D7-A39C-EBDC0F9CD7E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KpmgTech.Components", "KpmgTech.Components\KpmgTech.Components.csproj", "{B602DCD2-6D9E-48D7-A39C-EBDC0F9CD7E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

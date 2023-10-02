@@ -1,0 +1,14 @@
+﻿@page "/pc"
+
+<h1>Parent Component Text</h1>
+
+<CascadingValue Value="@Style" Name="ColorStyle" IsFixed=true>
+    <CascadingValue Value="@EmployeeAge" Name="EmpAge">
+        <ChildComponent></ChildComponent>
+    </CascadingValue>
+</CascadingValue>
+
+@code {
+    public string Style { get; set; } = "color:red";
+    public int EmployeeAge { get; set; } = 25;
+}

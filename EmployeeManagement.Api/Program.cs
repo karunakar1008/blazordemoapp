@@ -1,6 +1,5 @@
 using EmployeeManagement.Api.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace EmployeeManagement.Api
 {
@@ -32,5 +31,6 @@ namespace EmployeeManagement.Api
 
             app.Run();
         }
+
     }
 }

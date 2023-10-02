@@ -1,6 +1,5 @@
 ﻿using EmployeeManagement.Api.Models;
 using EmployeeManagement.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.Api.Controllers
@@ -29,6 +28,7 @@ namespace EmployeeManagement.Api.Controllers
                     "Error retrieving data from the database");
             }
         }
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
@@ -46,6 +46,7 @@ namespace EmployeeManagement.Api.Controllers
                     "Error retrieving data from the database");
             }
         }
+
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
@@ -98,6 +99,7 @@ namespace EmployeeManagement.Api.Controllers
                     "Error updating data");
             }
         }
+
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<Employee>> DeleteEmployee(int id)
         {

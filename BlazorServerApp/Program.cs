@@ -16,7 +16,7 @@ namespace BlazorServerApp
             builder.Services.AddSingleton<WeatherForecastService>();
 
             builder.Services.AddLogging(context => context.AddDebug());
-
+            builder.Services.AddHttpClient();
             builder.Services.AddHttpClient<IEmployeeService, EmployeeService>(client =>
             {
                 client.BaseAddress = new Uri(baseAddress);

@@ -1,9 +1,8 @@
 ﻿using EmployeeManagement.Models;
-using Microsoft.AspNetCore.Components;
-using System.Collections.Generic;
-using System.Net.Http;
+using Newtonsoft.Json;
 using System.Net.Http.Json;
-using System.Threading.Tasks;
+using System.Text;
+using System.Text.Json.Serialization;
 
 namespace BlazorServerApp.Services
 {
@@ -25,15 +24,18 @@ namespace BlazorServerApp.Services
         {
             return await httpClient.GetFromJsonAsync<Employee>($"api/employees/{id}");
         }
-        public async Task<Employee> UpdateEmployee(int id,Employee updatedEmployee)
+        public async Task<Employee> UpdateEmployee(int id, Employee updatedEmployee)
         {
             //return await httpClient.PutJsonAsync<Employee>("api/employees", updatedEmployee);
-            var response= await httpClient.PutAsJsonAsync<Employee>($"api/employees/{id}", updatedEmployee);
+            var response = await httpClient.PutAsJsonAsync<Employee>($"api/employees/{id}", updatedEmployee);
             return updatedEmployee;
         }
         public async Task<Employee> CreateEmployee(Employee newEmployee)
         {
-            var response = await httpClient.PostAsJsonAsync<Employee>("api/employees", newEmployee);
+            //string json = JsonConvert.SerializeObject(newEmployee);   //using Newtonsoft.Json
+            //StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //var response = await httpClient.PostAsync($"api/employees/", httpContent);
+            var result= await httpClient.PostAsJsonAsync<Employee>("api/employees", newEmployee);
             return newEmployee;
         }
         public async Task DeleteEmployee(int id)

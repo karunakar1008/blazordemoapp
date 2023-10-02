@@ -1,0 +1,14 @@
+﻿<h3>AddEmployee</h3>
+<EditForm>
+    <KpmgInputText InputAttributes="attributesFromParent"></KpmgInputText>
+</EditForm>
+@code {
+    public Dictionary<string, object> attributesFromParent { get; set; } =
+        new Dictionary<string, object>()
+            {
+            { "required", "required" },
+            { "placeholder", "Parent Component Placeholder" },
+            { "size", "50" },
+            { "maxlength", "5" }
+            };
+}

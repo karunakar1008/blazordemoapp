@@ -8,8 +8,8 @@ namespace BlazorServerApp.Pages
 
         protected void IncrementCount()
         {
-            int a = 0;
-            int b = 10 / a;
+            //int a = 0;
+            //int b = 10 / a;
             currentCount++;
         }
     }

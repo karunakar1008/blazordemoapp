@@ -28,5 +28,7 @@ public class Employee
     public Department Department { get; set; }
     public int DepartmentId { get; set; }
     public string PhotoPath { get; set; }
+
+    public decimal Experiennce { get; set; }
 }
 

@@ -25,6 +25,7 @@ namespace EmployeeManagement.Models.ViewModels
         public Gender Gender { get; set; }
         public int? DepartmentId { get; set; }
         public string PhotoPath { get; set; }
+        public decimal Experiennce { get; set; }
 
         [ValidateComplexType]
         public Department Department { get; set; } = new Department();
