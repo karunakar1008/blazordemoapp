@@ -17,7 +17,7 @@ namespace BlazorServerApp.Services
 
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
-            System.Threading.Thread.Sleep(4000);
+            //System.Threading.Thread.Sleep(4000);
             return await httpClient.GetFromJsonAsync<Employee[]>("api/employees");
         }
         public async Task<Employee> GetEmployee(int id)
@@ -32,10 +32,10 @@ namespace BlazorServerApp.Services
         }
         public async Task<Employee> CreateEmployee(Employee newEmployee)
         {
-            //string json = JsonConvert.SerializeObject(newEmployee);   //using Newtonsoft.Json
-            //StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-            //var response = await httpClient.PostAsync($"api/employees/", httpContent);
-            var result= await httpClient.PostAsJsonAsync<Employee>("api/employees", newEmployee);
+            string json = JsonConvert.SerializeObject(newEmployee);   //using Newtonsoft.Json
+            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            var response = await httpClient.PostAsync($"api/employees/", httpContent);
+            //var result= await httpClient.PostAsJsonAsync<Employee>("api/employees", newEmployee);
             return newEmployee;
         }
         public async Task DeleteEmployee(int id)

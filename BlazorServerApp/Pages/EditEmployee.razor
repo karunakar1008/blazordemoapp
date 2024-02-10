@@ -2,6 +2,12 @@
 @page "/editemployee"
 @inherits EditEmployeeBase
 
+@if (EditEmployeeModel == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
 <EditForm Model="@EditEmployeeModel" OnValidSubmit="HandleValidSubmit">
     @*    <DataAnnotationsValidator />*@
     <ObjectGraphDataAnnotationsValidator />
@@ -111,3 +117,4 @@
         </button>
     }
 </EditForm>
+}

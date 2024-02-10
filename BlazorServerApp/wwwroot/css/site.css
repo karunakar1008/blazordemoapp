@@ -67,6 +67,14 @@ a, .btn-link {
     height: 200px;
     width: auto;
 }
+
+.card-deck {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border: 2px solid silver;
+}
+
 .spinner {
     border: 16px solid silver;
     border-top: 16px solid #337AB7;

@@ -1,6 +1,7 @@
 ﻿using EmployeeManagement.Api.Models;
 using EmployeeManagement.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace EmployeeManagement.Api.Controllers
 {
@@ -20,6 +21,7 @@ namespace EmployeeManagement.Api.Controllers
         {
             try
             {
+                System.Threading.Thread.Sleep(2000);
                 return Ok(await employeeRepository.GetEmployees());
             }
             catch (Exception)
@@ -34,6 +36,7 @@ namespace EmployeeManagement.Api.Controllers
         {
             try
             {
+                System.Threading.Thread.Sleep(2000);
                 var result = await employeeRepository.GetEmployee(id);
 
                 if (result == null) return NotFound();
