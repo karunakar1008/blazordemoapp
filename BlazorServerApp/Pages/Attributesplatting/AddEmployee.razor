@@ -1,8 +1,11 @@
-﻿<h3>AddEmployee</h3>
-<EditForm>
+﻿@page "/attributeflattering"
+<h3>Attribute flattering</h3>
+<EditForm Model="Emp">
     <KpmgInputText InputAttributes="attributesFromParent"></KpmgInputText>
 </EditForm>
 @code {
+
+    public Employee Emp { get; set; }=new();
     public Dictionary<string, object> attributesFromParent { get; set; } =
         new Dictionary<string, object>()
             {
@@ -11,4 +14,8 @@
             { "size", "50" },
             { "maxlength", "5" }
             };
+    public class Employee
+    {
+        public string Name { get; set; }
+    }
 }

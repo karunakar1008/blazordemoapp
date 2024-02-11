@@ -1,8 +1,5 @@
 ﻿using EmployeeManagement.Models;
 using Newtonsoft.Json;
-using System.Net.Http.Json;
-using System.Text;
-using System.Text.Json.Serialization;
 
 namespace BlazorServerApp.Services
 {

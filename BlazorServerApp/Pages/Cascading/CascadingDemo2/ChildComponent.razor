@@ -1,0 +1,11 @@
+﻿<h3>Child Component</h3>
+<p>
+    User Id: @UserLoginDetails.UserId
+</p>
+<p>
+    User Name: @UserLoginDetails.UserName
+</p>
+@code {
+    [CascadingParameter(Name = "UserDetails")]
+    public UserLoginDetails UserLoginDetails { get; set; }
+}

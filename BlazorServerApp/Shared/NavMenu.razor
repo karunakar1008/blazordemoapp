@@ -1,6 +1,6 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">BlazorServerApp</a>
+        <a class="navbar-brand" href="">Blazor Features</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,7 +11,22 @@
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+                <span class="oi" aria-hidden="true"></span> Employees Crud
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/databinding1" Match="NavLinkMatch.All">
+                <span class="oi" aria-hidden="true"></span>Data Binding
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/employeedetails/2" Match="NavLinkMatch.All">
+                <span class="oi" aria-hidden="true"></span>routing
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/cascadingdemo1" Match="NavLinkMatch.All">
+                <span class="oi" aria-hidden="true"></span>Cascading
             </NavLink>
         </div>
         <div class="nav-item px-3">

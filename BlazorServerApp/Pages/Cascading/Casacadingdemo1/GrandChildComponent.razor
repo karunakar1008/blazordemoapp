@@ -1,0 +1,9 @@
+﻿<h1 style="@ElementStyle">-Grand Child Component, Employee Age = @EmpAge</h1>
+
+@code {
+    [CascadingParameter(Name = "ColorStyle")]
+    public string ElementStyle { get; set; }
+
+    [CascadingParameter(Name = "EmpAge")]
+    public int EmpAge { get; set; }
+}

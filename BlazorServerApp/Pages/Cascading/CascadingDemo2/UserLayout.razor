@@ -1,0 +1,14 @@
+﻿@page "/cascadingdemo2"
+
+<CascadingValue Value="@UserLoginDetails" Name="UserDetails" IsFixed=true>
+        <ChildComponent />
+</CascadingValue>
+
+@code{
+    public UserLoginDetails UserLoginDetails { get; set; } = new UserLoginDetails()
+        {
+            UserId = 1,
+            EmailId = "karunakarb@kpmg.com",
+            UserName = "karunakar"
+        };
+}
